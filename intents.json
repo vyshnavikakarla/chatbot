@@ -1,0 +1,75 @@
+
+{"intents": [
+        {"tag": "greeting",
+         "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day"],
+         "responses": ["Hello, thanks for asking", "Good to see you again", "Hi there, how can I help?"],
+         "context": [""]
+        },
+        {"tag": "goodbye",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["See you!", "Have a nice day", "Bye! Come back again soon."],
+         "context": [""]
+        },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure"],
+         "context": [""]
+        },
+        {"tag": "noanswer",
+         "patterns": [],
+         "responses": ["Sorry, can't understand you", "Please give me more info", "Not sure I understand"],
+         "context": [""]
+        },
+        {"tag": "options",
+         "patterns": ["How you could help me?", "What you can do?", "What help you provide?", "How you can be helpful?", "What support is offered"],
+         "responses": ["I can guide you through Adverse drug reaction list, Blood pressure tracking, Hospitals and Pharmacies","offering support for Adverse drug reaction,Blood pressure,Hospitals and pharmacies"],
+         "context": [""]
+        },
+        {"tag": "adverse_drug",
+         "patterns": ["How to check Adverse drug reaction?","Open adverse drug module","Give me a list of drugs causing adverse behaviour","List all drugs suitable for patient with adverse reaction","which drugs dont have adverse reaction?"],
+         "responses": ["To check adverse drug reaction Oral rechallenge is currently the gold statement but carries the risk of recrudescence of severe allergic symptoms other tests include skin pricktests,the lymphocyte transformation test,immunohistochemistry, and patch testing","Adverse drug reactions are classified into six types dose-related(Augmentation),non-dose-related(Bizarre),dose-related and time related(chronic),time-related(chronic),time-related(Delayed),withdrawal(End of use),and failure of therapy(Failure)","list of drugs causing adverse behaviour are mentioned as A total of 334 ADRs were reported. The majority of the ADRs were reported from antipsychotics (60.6%) followed by antidepressants (25.5%) and  antiepileptic drugs (5.8%). On further subgroup analysis of the drug classes among antipsychotics, Clozapine (15.8%) was the leading offending agent. Similarly, among Antidepressants, Escitalopram (6.1%) was causing the most side effects The most common ADR reported was sedation (7.26%) followed by salivary hypersecretion (6.7%), akathisia (5.52%), and weight gain (5.52%)","list of drugs suitable for patient with adverse drug reaction are Antihistamines decrease mild symptoms such as itching or a rash.Epinephrine is medicine used to treat severe allergic reactions such as anaphylaxis.steroids reduce  inflammation","The drugs that dont have adverse reaction is placebo a substance or treatment which is designed to have no therapeutic value common placebos include inert tablets(like sugar pills),inert injections(like saline),sham surgery,and other procedures"],
+         "context": [""]
+        },
+        {"tag": "blood_pressure",
+         "patterns": ["Open blood pressure module", "Task related to blood pressure", "Blood pressure data entry", "I want to log blood pressure results", 
+         "Blood pressure data management" ],
+         "responses": ["High blood pressure usually develops over time.it can happen because of unhealthy lifestyle choices,such as not getting enough regular physical activity","yes,please you should log by search","regular physical activity,eat less salt,add more potassium to diet,avoid alcohol consumption and reducing stress can lower blood pressure "],
+         "context": [""]
+        },
+        {"tag": "blood_pressure_search",
+         "patterns": ["I have a blood pressure of 110/68 mm Hg","I have a blood pressure of 190/30", "I want to search for blood pressure result history", "Blood pressure for patient", "Load patient blood pressure result", "Show blood pressure results for patient", "Find blood pressure results by ID" ],
+         "responses": ["Please provide Patient ID", "Patient ID?"],
+         "context": [""]
+        },
+        {"tag": "search_blood_pressure_by_patient_id",
+         "patterns": [],
+         "responses": ["Loading blood pressure result for patient"],
+         "context": [""]
+        },
+        {"tag": "pharmacy_search",
+         "patterns": ["Find me a pharmacy", "Find pharmacy", "List of pharmacies nearby", "Locate pharmacy", "Search pharmacy" ],
+         "responses": ["Please provide pharmacy name"],
+         "context": ["search_pharmacy_by_name"]
+        },
+        {"tag": "search_pharmacy_by_name",
+         "patterns": [],
+         "responses": ["Loading pharmacy details"],
+         "context": [""]
+        },
+        {"tag": "hospital_search",
+         "patterns": ["Lookup for hospital", "Searching for hospital to transfer patient", "I want to search hospital data", "Hospital lookup for patient", "Looking up hospital details" ],
+         "responses": ["Please provide hospital name or location"],
+         "context": ["search_hospital_by_params"]
+        },
+        {"tag": "search_hospital_by_params",
+         "patterns": [""],
+         "responses": ["please provide hospital type"],
+         "context": ["search_hospital_by_type"]
+        },
+        {"tag": "search_hospital_by_type",
+         "patterns": [],
+          "responses": ["Loading hospital details"],
+         "context": [""]
+        }
+   ]
+}
